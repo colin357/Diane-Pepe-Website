@@ -48,7 +48,6 @@
       "name": "Diane Pepe",
       "alternateName": "The Mortgage Pharmacist",
       "jobTitle": "Loan Officer",
-      "identifier": { "@type": "PropertyValue", "propertyID": "NMLS", "value": "2061796" },
       "description": "Diane Pepe is a loan officer with Fairway Independent Mortgage Corporation serving the Denver Metro area of Colorado and Lexington, Nebraska. Before mortgages, she worked as a pharmacist for 25 years, which is why clients call her The Mortgage Pharmacist.",
       "image": "https://www.dianepepe.com/assets/img/diane-pepe.jpg",
       "url": "https://www.dianepepe.com/about",
@@ -283,70 +282,108 @@
   </section>
 
   <!-- Formulary -->
-  <section class="section" id="programs" aria-labelledby="formulary-title">
+  <section class="section section--bottle formulary-sec" id="programs" aria-labelledby="formulary-title">
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-head__num label">03 &mdash; The Formulary</span>
         <div>
           <h2 id="formulary-title" class="display h-lg">Loan programs, <em>by indication.</em></h2>
-          <p class="lede">Every borrower is different. These are the programs Diane works with most, and who each one is usually right for.</p>
+          <p class="lede">Every borrower is different. These are the programs Diane works with most &mdash; and who each one is usually right for.</p>
         </div>
       </div>
       <div class="formulary">
-        <a class="drug" href="/loan-programs#first-time-buyers">
-          <div class="drug__top"><span class="label">Rx 01</span><span class="label">Most requested</span></div>
-          <h3>First-Time Buyers</h3>
-          <p class="drug__ind"><b>Indicated for</b>Renters ready to own, with low-down-payment options and help finding assistance programs.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--feature" href="/loan-programs#first-time-buyers">
+          <div class="drug__photo"><img src="/assets/img/suburban-home.webp" loading="lazy" alt="A brick suburban home with a two-car garage and a green front lawn"></div>
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 01 &middot; Most requested</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-first"/></svg></span></div>
+            <h3>First-Time Buyers</h3>
+            <p class="drug__ind"><b>Indicated for</b>Renters ready to own, with low-down-payment options and help finding assistance programs.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>As little as 3% down on qualifying conventional loans.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#fha">
-          <div class="drug__top"><span class="label">Rx 02</span><span class="label">Gov&rsquo;t-backed</span></div>
-          <h3>FHA Loans</h3>
-          <p class="drug__ind"><b>Indicated for</b>Buyers with smaller down payments or credit that&rsquo;s still being rebuilt.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--fha" href="/loan-programs#fha">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 02 &middot; Gov&rsquo;t-backed</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-fha"/></svg></span></div>
+            <h3>FHA Loans</h3>
+            <p class="drug__ind"><b>Indicated for</b>Buyers with smaller down payments or credit that&rsquo;s still being rebuilt.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>3.5% down with a credit score of 580 or higher.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#va">
-          <div class="drug__top"><span class="label">Rx 03</span><span class="label">Earned benefit</span></div>
-          <h3>VA Loans</h3>
-          <p class="drug__ind"><b>Indicated for</b>Eligible veterans, service members, and surviving spouses &mdash; often with no down payment.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--va" href="/loan-programs#va">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 03 &middot; Earned benefit</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-va"/></svg></span></div>
+            <h3>VA Loans</h3>
+            <p class="drug__ind"><b>Indicated for</b>Eligible veterans, service members, and surviving spouses.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Often $0 down, with no monthly mortgage insurance.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#refinance">
-          <div class="drug__top"><span class="label">Rx 04</span><span class="label">Existing owners</span></div>
-          <h3>Refinancing</h3>
-          <p class="drug__ind"><b>Indicated for</b>Lowering a payment, changing a term, removing mortgage insurance, or tapping equity.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--refi" href="/loan-programs#refinance">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 04 &middot; Existing owners</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-refi"/></svg></span></div>
+            <h3>Refinancing</h3>
+            <p class="drug__ind"><b>Indicated for</b>Lowering a payment, changing a term, removing mortgage insurance, or tapping equity.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Rate-and-term, cash-out, FHA streamline and VA IRRRL.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#jumbo">
-          <div class="drug__top"><span class="label">Rx 05</span><span class="label">High balance</span></div>
-          <h3>Luxury &amp; Jumbo</h3>
-          <p class="drug__ind"><b>Indicated for</b>Homes priced above conforming loan limits, common across the Front Range.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--jumbo" href="/loan-programs#jumbo">
+          <div class="drug__photo"><img src="/assets/img/modern-home.webp" loading="lazy" alt="A modern luxury home glowing at dusk beneath a large tree"></div>
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 05 &middot; High balance</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-jumbo"/></svg></span></div>
+            <h3>Luxury &amp; Jumbo</h3>
+            <p class="drug__ind"><b>Indicated for</b>Homes priced above conforming loan limits &mdash; common across the Front Range.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Loan amounts above the annual conforming limit.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#investment">
-          <div class="drug__top"><span class="label">Rx 06</span><span class="label">Portfolio</span></div>
-          <h3>Investment Property</h3>
-          <p class="drug__ind"><b>Indicated for</b>Buyers adding a rental, a second home, or a long-term hold to their plan.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--inv" href="/loan-programs#investment">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 06 &middot; Portfolio</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-invest"/></svg></span></div>
+            <h3>Investment Property</h3>
+            <p class="drug__ind"><b>Indicated for</b>Buyers adding a rental, a second home, or a long-term hold to their plan.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>1&ndash;4 unit rentals, condos and second homes.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#new-construction">
-          <div class="drug__top"><span class="label">Rx 07</span><span class="label">Build</span></div>
-          <h3>New Construction</h3>
-          <p class="drug__ind"><b>Indicated for</b>Buyers purchasing from a builder or financing a home that isn&rsquo;t finished yet.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--build" href="/loan-programs#new-construction">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 07 &middot; Build</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-build"/></svg></span></div>
+            <h3>New Construction</h3>
+            <p class="drug__ind"><b>Indicated for</b>Buyers purchasing from a builder or financing a home that isn&rsquo;t finished yet.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Extended rate locks while your home is built.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#relocation">
-          <div class="drug__top"><span class="label">Rx 08</span><span class="label">On the move</span></div>
-          <h3>Relocation</h3>
-          <p class="drug__ind"><b>Indicated for</b>Families moving to Colorado or Nebraska for work, school, or to be closer to family.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--move" href="/loan-programs#relocation">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 08 &middot; On the move</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-move"/></svg></span></div>
+            <h3>Relocation</h3>
+            <p class="drug__ind"><b>Indicated for</b>Families moving to Colorado or Nebraska for work, school, or family.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Timelines built around your move date.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
-        <a class="drug" href="/loan-programs#downsizing">
-          <div class="drug__top"><span class="label">Rx 09</span><span class="label">Next chapter</span></div>
-          <h3>Downsizing</h3>
-          <p class="drug__ind"><b>Indicated for</b>Empty-nesters and retirees right-sizing, with options for buying before you sell.</p>
-          <span class="drug__more"><span>Learn more</span><span>&rarr;</span></span>
+        <a class="drug drug--down" href="/loan-programs#downsizing">
+          <div class="drug__label">
+            <div class="drug__top"><span class="label">Rx 09 &middot; Next chapter</span><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-down"/></svg></span></div>
+            <h3>Downsizing</h3>
+            <p class="drug__ind"><b>Indicated for</b>Empty-nesters and retirees right-sizing into something simpler.</p>
+            <p class="drug__dose"><span class="label">Key fact</span>Buy-before-you-sell and 62+ reverse-for-purchase options.</p>
+            <span class="drug__more"><span>Read the monograph</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          </div>
         </a>
+        <div class="drug drug--cta">
+          <div class="drug__label">
+            <span class="rx">&#8478;</span>
+            <h3>Not sure which fits?</h3>
+            <p>That&rsquo;s what the consultation is for. Diane will compare the programs you qualify for, side by side.</p>
+            <a class="btn btn--brass" href="#consult">Book a consultation
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -392,38 +429,42 @@
   </section>
 
   <!-- Reviews -->
-  <section class="section" id="reviews" aria-labelledby="reviews-title">
+  <section class="section section--chalk" id="reviews" aria-labelledby="reviews-title">
     <div class="wrap">
       <div class="sec-head">
         <span class="sec-head__num label">05 &mdash; Clinical Results</span>
-        <h2 id="reviews-title" class="display h-lg">In their <em>own words.</em></h2>
+        <div>
+          <h2 id="reviews-title" class="display h-lg">In their <em>own words.</em></h2>
+          <p class="lede">Lightly trimmed for length. Each one came from a family Diane helped bring home.</p>
+        </div>
       </div>
       <div class="reviews">
         <figure class="review review--lead reveal">
-          <span class="label">Review &middot; 01</span>
-          <div>
-            <blockquote>&ldquo;She was patient, caring, professional, and always willing to go above and beyond. She never gave up on us, even when things became stressful or complicated. I highly recommend her to anyone looking for someone who genuinely cares.&rdquo;</blockquote>
-            <figcaption class="label" style="margin-top:1.5rem">Homeowner &amp; mom of two daughters</figcaption>
+          <div class="review--lead__img"><img src="/assets/img/living-room.webp" loading="lazy" alt="A warm, sunlit living room with plants and a cozy sofa"></div>
+          <div class="review--lead__body">
+            <svg class="review__q" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 24V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10H3Zm13 0V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10h-9Z" fill="currentColor"/></svg>
+            <blockquote>She was patient, caring, professional, and always willing to go above and beyond. She never gave up on us, even when things became stressful or complicated.</blockquote>
+            <figcaption><span class="label">Homeowner &amp; mom of two daughters</span><span class="label">Denver Metro</span></figcaption>
           </div>
         </figure>
         <figure class="review reveal">
-          <svg class="review__q" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 24V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10H3Zm13 0V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10h-9Z" fill="currentColor"/></svg>
-          <blockquote>I liked the way that you were straightforward with what you needed from me. You gave me a list of things you needed to get me qualified for my loan and it went really well and surprisingly fast! Thanks for a great experience, Diane!</blockquote>
+          <div class="review__top"><span class="label">No. 01</span><span class="review__mark" aria-hidden="true">&#8478;</span></div>
+          <blockquote>&ldquo;I liked the way you were straightforward with what you needed from me. You gave me a list of things to get me qualified, and it went really well &mdash; and surprisingly fast!&rdquo;</blockquote>
           <figcaption class="label">Recent buyer</figcaption>
         </figure>
         <figure class="review reveal">
-          <svg class="review__q" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 24V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10H3Zm13 0V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10h-9Z" fill="currentColor"/></svg>
-          <blockquote>Being first-time home buyers, she guided us and answered all of our questions and concerns. She also took it upon herself to be available all the time. We appreciate Diane so much!</blockquote>
+          <div class="review__top"><span class="label">No. 02</span><span class="review__mark" aria-hidden="true">&#8478;</span></div>
+          <blockquote>&ldquo;Being first-time home buyers, she guided us and answered all of our questions and concerns. She also took it upon herself to be available all the time.&rdquo;</blockquote>
           <figcaption class="label">First-time buyers</figcaption>
         </figure>
         <figure class="review reveal">
-          <svg class="review__q" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 24V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10H3Zm13 0V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10h-9Z" fill="currentColor"/></svg>
-          <blockquote>Thank you for making our dream of our new home possible. We truly appreciate all your effort, patience and support throughout the whole process. We are so grateful.</blockquote>
+          <div class="review__top"><span class="label">No. 03</span><span class="review__mark" aria-hidden="true">&#8478;</span></div>
+          <blockquote>&ldquo;Thank you for making our dream of our new home possible. We truly appreciate all your effort, patience and support throughout the whole process.&rdquo;</blockquote>
           <figcaption class="label">New homeowners</figcaption>
         </figure>
         <figure class="review reveal">
-          <svg class="review__q" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 24V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10H3Zm13 0V15c0-6 3-10 9-11v3c-3 1-5 3-5 7h5v10h-9Z" fill="currentColor"/></svg>
-          <blockquote>Diane is such an incredible and passionate person that loves what she does. As a professional and as a person, she cares about you.</blockquote>
+          <div class="review__top"><span class="label">No. 04</span><span class="review__mark" aria-hidden="true">&#8478;</span></div>
+          <blockquote>&ldquo;Diane is such an incredible and passionate person who loves what she does. As a professional and as a person, she cares about you.&rdquo;</blockquote>
           <figcaption class="label">Client review</figcaption>
         </figure>
       </div>
@@ -599,7 +640,7 @@
     </div>
     <div class="footer__legal">
       <div>
-        <p>Diane Pepe, Loan Officer, NMLS #2061796. Fairway Independent Mortgage Corporation, NMLS #2289. <a href="https://www.nmlsconsumeraccess.org/" rel="noopener" target="_blank">NMLS Consumer Access</a>.</p>
+        <p>Diane Pepe, Loan Officer, NMLS #XXXXXX. Fairway Independent Mortgage Corporation, NMLS #2289. <a href="https://www.nmlsconsumeraccess.org/" rel="noopener" target="_blank">NMLS Consumer Access</a>.</p>
         <p>This is not a commitment to lend. All loans are subject to credit approval, underwriting guidelines, and property eligibility. Programs, rates, terms, and conditions are subject to change without notice. Information on this site is educational and not financial, tax, or legal advice.</p>
         <p>&copy; <span data-year>2026</span> Diane Pepe. All rights reserved.</p>
       </div>

@@ -40,7 +40,7 @@
       "name": "Home Loan Programs in Denver and Lexington, Nebraska",
       "isPartOf": { "@id": "https://www.dianepepe.com/#website" },
       "about": { "@id": "https://www.dianepepe.com/#business" },
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".answer-box p", ".program__body > p:first-child"] }
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".answer-box p", ".program__body > p:first-of-type"] }
     },
     {
       "@type": "ItemList",
@@ -133,8 +133,11 @@
   <div class="wrap">
 
     <article class="program" id="first-time-buyers">
-      <div class="program__side"><span class="label label--brass">Rx 01</span><h2 class="display">First-Time Home Buyers</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 01</span><h2 class="display">First-Time Home Buyers</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-first"/></svg></span><span class="label">Key fact</span><p>As little as 3% down on qualifying conventional loans.</p></div></div>
+      </div>
       <div class="program__body">
+        <figure class="program__photo"><img src="/assets/img/suburban-home.webp" loading="lazy" alt="A brick suburban home with a two-car garage"></figure>
         <p>First-time buyer loans let you purchase a home with a smaller down payment &mdash; as little as 3% on some conventional programs and 3.5% with FHA &mdash; and may be paired with down payment assistance.</p>
         <dl class="facts">
           <div><dt class="label">Down payment</dt><dd>From 3% (conventional) or 3.5% (FHA)</dd></div>
@@ -152,7 +155,9 @@
     </article>
 
     <article class="program" id="fha">
-      <div class="program__side"><span class="label label--brass">Rx 02</span><h2 class="display">FHA Loans</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 02</span><h2 class="display">FHA Loans</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-fha"/></svg></span><span class="label">Key fact</span><p>3.5% down with a credit score of 580 or higher.</p></div></div>
+      </div>
       <div class="program__body">
         <p>An FHA loan is a mortgage insured by the Federal Housing Administration that allows a down payment of 3.5% with a credit score of 580 or higher, making it a common choice for buyers whose credit or savings are still being built.</p>
         <dl class="facts">
@@ -171,7 +176,9 @@
     </article>
 
     <article class="program" id="va">
-      <div class="program__side"><span class="label label--brass">Rx 03</span><h2 class="display">VA Loans</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 03</span><h2 class="display">VA Loans</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-va"/></svg></span><span class="label">Key fact</span><p>Often $0 down, with no monthly mortgage insurance.</p></div></div>
+      </div>
       <div class="program__body">
         <p>A VA loan is a mortgage guaranteed by the U.S. Department of Veterans Affairs for eligible veterans, service members, and some surviving spouses. It typically requires no down payment and no monthly mortgage insurance.</p>
         <dl class="facts">
@@ -190,7 +197,9 @@
     </article>
 
     <article class="program" id="refinance">
-      <div class="program__side"><span class="label label--brass">Rx 04</span><h2 class="display">Refinancing</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 04</span><h2 class="display">Refinancing</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-refi"/></svg></span><span class="label">Key fact</span><p>Rate-and-term, cash-out, FHA streamline and VA IRRRL.</p></div></div>
+      </div>
       <div class="program__body">
         <p>Refinancing replaces your current mortgage with a new one to lower your rate or payment, change your loan term, remove mortgage insurance, or take cash out of your home&rsquo;s equity.</p>
         <dl class="facts">
@@ -209,8 +218,11 @@
     </article>
 
     <article class="program" id="jumbo">
-      <div class="program__side"><span class="label label--brass">Rx 05</span><h2 class="display">Luxury &amp; Jumbo Loans</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 05</span><h2 class="display">Luxury &amp; Jumbo Loans</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-jumbo"/></svg></span><span class="label">Key fact</span><p>Loan amounts above the annual conforming limit.</p></div></div>
+      </div>
       <div class="program__body">
+        <figure class="program__photo"><img src="/assets/img/modern-home.webp" loading="lazy" alt="A modern luxury home lit up at dusk"></figure>
         <p>A jumbo loan is a mortgage larger than the conforming loan limit set each year by the Federal Housing Finance Agency. It&rsquo;s used to finance higher-priced homes, which are common across the Denver Metro area and Front Range.</p>
         <dl class="facts">
           <div><dt class="label">Loan size</dt><dd>Above the annual conforming limit</dd></div>
@@ -227,7 +239,9 @@
     </article>
 
     <article class="program" id="investment">
-      <div class="program__side"><span class="label label--brass">Rx 06</span><h2 class="display">Investment Property</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 06</span><h2 class="display">Investment Property</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-invest"/></svg></span><span class="label">Key fact</span><p>1&ndash;4 unit rentals, condos and second homes.</p></div></div>
+      </div>
       <div class="program__body">
         <p>Investment property loans finance a home you won&rsquo;t live in as your primary residence, such as a long-term rental. They usually require a larger down payment and more reserves than a primary-residence loan.</p>
         <dl class="facts">
@@ -254,7 +268,9 @@
 
   <div class="wrap">
     <article class="program" id="new-construction">
-      <div class="program__side"><span class="label label--brass">Rx 07</span><h2 class="display">New Construction</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 07</span><h2 class="display">New Construction</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-build"/></svg></span><span class="label">Key fact</span><p>Extended rate locks while your home is built.</p></div></div>
+      </div>
       <div class="program__body">
         <p>New construction financing covers buying a newly built home from a builder or financing a home while it&rsquo;s being built, often with extended rate locks to protect you while construction finishes.</p>
         <dl class="facts">
@@ -272,8 +288,11 @@
     </article>
 
     <article class="program" id="relocation">
-      <div class="program__side"><span class="label label--brass">Rx 08</span><h2 class="display">Relocation</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 08</span><h2 class="display">Relocation</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-move"/></svg></span><span class="label">Key fact</span><p>Timelines built around your move date.</p></div></div>
+      </div>
       <div class="program__body">
+        <figure class="program__photo"><img src="/assets/img/denver-city-park.webp" loading="lazy" alt="The Denver skyline across City Park"></figure>
         <p>Relocation loans help you buy a home when you&rsquo;re moving to a new area for work or family, coordinating your purchase timeline with a job start date, a sale in another state, or a remote closing.</p>
         <dl class="facts">
           <div><dt class="label">Timeline</dt><dd>Built around your move date</dd></div>
@@ -290,7 +309,9 @@
     </article>
 
     <article class="program" id="downsizing">
-      <div class="program__side"><span class="label label--brass">Rx 09</span><h2 class="display">Downsizing</h2></div>
+      <div class="program__side"><span class="label label--brass">Rx 09</span><h2 class="display">Downsizing</h2>
+        <div class="program__card"><div><span class="seal"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-down"/></svg></span><span class="label">Key fact</span><p>Buy-before-you-sell and 62+ reverse-for-purchase options.</p></div></div>
+      </div>
       <div class="program__body">
         <p>Downsizing loans help empty-nesters and retirees move into a smaller or simpler home, often using equity from their current house, and sometimes buying the new home before the old one sells.</p>
         <dl class="facts">
@@ -411,7 +432,7 @@
     </div>
     <div class="footer__legal">
       <div>
-        <p>Diane Pepe, Loan Officer, NMLS #2061796. Fairway Independent Mortgage Corporation, NMLS #2289. <a href="https://www.nmlsconsumeraccess.org/" rel="noopener" target="_blank">NMLS Consumer Access</a>.</p>
+        <p>Diane Pepe, Loan Officer, NMLS #XXXXXX. Fairway Independent Mortgage Corporation, NMLS #2289. <a href="https://www.nmlsconsumeraccess.org/" rel="noopener" target="_blank">NMLS Consumer Access</a>.</p>
         <p>This is not a commitment to lend. All loans are subject to credit approval, underwriting guidelines, and property eligibility. Programs, rates, terms, and conditions are subject to change without notice. Information on this site is educational and not financial, tax, or legal advice.</p>
         <p>&copy; <span data-year>2026</span> Diane Pepe. All rights reserved.</p>
       </div>
