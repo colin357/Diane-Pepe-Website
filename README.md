@@ -30,7 +30,7 @@ No build step. Plain HTML, CSS and a small JS file, deployed on Vercel.
 ## Before launch, replace these
 
 - **Domain**: every absolute URL uses `https://www.dianepepe.com`. Find and replace it if the domain is different (HTML files, `sitemap.xml`, `robots.txt`, `llms.txt`).
-- **Individual NMLS #**: `NMLS #XXXXXX` appears in the footer of every page and in `llms.txt`. This is required for compliance.
+- **Individual NMLS #**: 2061796 is set in the footer of every page and in `llms.txt`.
 - **Email**: the site uses `diane.pepe@home.com` from her intake form. Confirm this, or switch it to her Fairway address.
 - **Licensing states**: the copy assumes she is licensed in CO and NE. Confirm this.
 - Have Fairway compliance review the disclosures and copy before going live.
