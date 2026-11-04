@@ -83,7 +83,6 @@ figure, blockquote { margin: 0; }
   line-height: 1.05;
   letter-spacing: -0.015em;
 }
-.display em { font-style: italic; }
 
 .h-xl { font-size: clamp(3rem, 8.4vw, 7.6rem); }
 .hero .h-xl { font-size: clamp(2.9rem, 6.4vw, 5.8rem); }
@@ -95,7 +94,6 @@ figure, blockquote { margin: 0; }
 
 .rx {
   font-family: var(--f-display);
-  font-style: italic;
   font-weight: 500;
 }
 
@@ -203,7 +201,6 @@ figure, blockquote { margin: 0; }
 .hero__eyebrow span + span::before { content: "/"; margin-right: 1.25rem; color: var(--brass); }
 .hero h1 { margin-bottom: 2rem; }
 .hero h1 .line { display: block; white-space: nowrap; }
-.hero h1 .indent { padding-left: clamp(0rem, 7vw, 6rem); }
 .hero .lede { margin-bottom: 2.5rem; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
 
@@ -308,7 +305,7 @@ figure, blockquote { margin: 0; }
 .process { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule-lt); }
 .process li { padding: 2.25rem 2rem 0 0; position: relative; }
 .process li + li { padding-left: 2rem; border-left: 1px solid var(--rule-lt); }
-.process__n { font-family: var(--f-display); font-style: italic; font-size: 4.2rem; line-height: 1; color: var(--brass-lt); margin-bottom: 1.5rem; display: block; }
+.process__n { font-family: var(--f-display); font-size: 2.6rem; line-height: 1; color: var(--brass-lt); margin-bottom: 1.5rem; display: block; }
 .process h3 { font-family: var(--f-display); font-size: 1.7rem; margin-bottom: .8rem; }
 .process p { color: rgba(236, 238, 231, .74); font-size: .98rem; }
 @media (max-width: 960px) {
@@ -444,7 +441,7 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
   font-family: var(--f-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; line-height: 1.5;
   transform: rotate(-8deg);
 }
-.symptoms__img .stamp span { font-family: var(--f-display); font-style: italic; font-size: 2.3rem; letter-spacing: 0; text-transform: none; display: block; line-height: 1; margin-bottom: .2rem; }
+.symptoms__img .stamp span { font-family: var(--f-display); font-size: 2.3rem; letter-spacing: 0; text-transform: none; display: block; line-height: 1; margin-bottom: .2rem; }
 .sym-list li { padding: 1.7rem 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 60px 1fr; gap: 1rem; }
 .sym-list li:last-child { border-bottom: 1px solid var(--rule); }
 .sym-list h3 { font-family: var(--f-display); font-size: 1.65rem; margin-bottom: .45rem; line-height: 1.1; }
@@ -472,7 +469,7 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
   border: 1px solid var(--rule); display: flex; flex-direction: column;
 }
 .review__top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: .9rem; margin-bottom: 1.4rem; }
-.review__mark { font-family: var(--f-display); font-style: italic; font-size: 1.6rem; line-height: 1; color: var(--brass); }
+.review__mark { font-family: var(--f-display); font-size: 1.6rem; line-height: 1; color: var(--brass); }
 .review blockquote { font-family: var(--f-display); font-size: clamp(1.2rem, 1.6vw, 1.42rem); line-height: 1.4; margin: 0 0 1.6rem; flex: 1; }
 .review figcaption { display: flex; gap: .75rem; align-items: center; }
 .review figcaption::before { content: ""; width: 28px; height: 1px; background: var(--brass); }
@@ -709,9 +706,3 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
 }
 @media (prefers-reduced-motion: reduce) { .g-review { transition: none; } }
 
-/* ---------- Closing-day photos ---------- */
-
-.closings { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1rem, 2.5vw, 1.75rem); align-items: stretch; }
-.closings figure { margin: 0; overflow: hidden; }
-.closings img { width: 100%; height: 100%; aspect-ratio: 4/3; object-fit: cover; }
-@media (max-width: 760px) { .closings { grid-template-columns: 1fr; } }
