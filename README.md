@@ -7,7 +7,7 @@ No build step. Plain HTML, CSS and a small JS file, deployed on Vercel.
 ## Deploy on Vercel
 
 1. Import this repo in Vercel → Framework preset: **Other** → no build command, output directory `.` (root).
-2. Add the custom domain. `vercel.json` turns on clean URLs (`/about`, `/loan-programs`, `/faq`) and sets cache and security headers.
+2. Add the custom domain. `vercel.json` turns on clean URLs (`/about`, `/loan-programs`, `/faq`) and sets cache and security headers. CSS and JS are always revalidated; images are cached for a year, so give a changed image a new filename.
 
 ## Pages
 
