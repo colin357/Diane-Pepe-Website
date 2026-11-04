@@ -685,12 +685,15 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
 .g-review[hidden] { display: none; }
 .g-review.is-in { opacity: 1; transform: none; pointer-events: auto; }
 .g-review__link { display: flex; align-items: center; gap: .85rem; padding: .85rem 1.1rem .85rem 1rem; text-decoration: none; color: inherit; border-radius: 16px; }
-.g-review__link:hover .g-review__cta { text-decoration: underline; }
 .g-review__logo { width: 34px; height: 34px; flex: none; }
 .g-review__text { display: flex; flex-direction: column; gap: .2rem; line-height: 1.2; }
+.g-review__score { display: flex; align-items: center; gap: .45rem; }
+.g-review__score b { font-size: 1.5rem; font-weight: 700; line-height: 1; color: #202124; }
 .g-review__stars { display: flex; gap: 2px; }
 .g-review__stars svg { width: 18px; height: 18px; fill: #f4b400; }
-.g-review__cta { font-size: .92rem; font-weight: 600; color: #3c4043; }
+.g-review__count { font-size: .9rem; color: #5f6368; }
+.g-review__count u { text-decoration: none; color: #1a73e8; font-weight: 600; }
+.g-review__link:hover .g-review__count u { text-decoration: underline; }
 .g-review__close {
   position: absolute; top: -9px; right: -9px; width: 24px; height: 24px; border-radius: 50%;
   border: 0; background: var(--bottle); color: var(--chalk); font-size: 16px; line-height: 1; cursor: pointer;
@@ -701,6 +704,14 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
   .g-review__link { padding: .65rem .9rem .65rem .8rem; gap: .65rem; }
   .g-review__logo { width: 28px; height: 28px; }
   .g-review__stars svg { width: 15px; height: 15px; }
-  .g-review__cta { font-size: .82rem; }
+  .g-review__score b { font-size: 1.25rem; }
+  .g-review__count { font-size: .8rem; }
 }
 @media (prefers-reduced-motion: reduce) { .g-review { transition: none; } }
+
+/* ---------- Closing-day photos ---------- */
+
+.closings { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1rem, 2.5vw, 1.75rem); align-items: stretch; }
+.closings figure { margin: 0; overflow: hidden; }
+.closings img { width: 100%; height: 100%; aspect-ratio: 4/3; object-fit: cover; }
+@media (max-width: 760px) { .closings { grid-template-columns: 1fr; } }
