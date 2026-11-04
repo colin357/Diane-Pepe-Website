@@ -623,3 +623,8 @@ figure, blockquote { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .g-review { transition: none; } }
 
+
+/* ---------- Signature ---------- */
+
+.signature { display: block; width: clamp(220px, 26vw, 300px); height: auto; margin: 1.75rem 0 0; }
+.signature--footer { width: clamp(220px, 24vw, 320px); margin: calc(-1 * clamp(1.5rem, 3vw, 3rem)) 0 clamp(3rem, 6vw, 5rem); opacity: .9; }
