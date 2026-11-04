@@ -62,4 +62,20 @@
         "&body=" + encodeURIComponent(lines.join("\n"));
     });
   }
+
+  // Google review prompt (bottom-left): appears after a short delay, dismissible per session
+  var review = document.getElementById("g-review");
+  if (review) {
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem("gReviewDismissed") === "1"; } catch (e) {}
+    if (!dismissed) {
+      review.hidden = false;
+      setTimeout(function () { review.classList.add("is-in"); }, 2500);
+      review.querySelector(".g-review__close").addEventListener("click", function () {
+        review.classList.remove("is-in");
+        setTimeout(function () { review.hidden = true; }, 500);
+        try { sessionStorage.setItem("gReviewDismissed", "1"); } catch (e) {}
+      });
+    }
+  }
 })();
