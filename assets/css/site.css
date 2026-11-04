@@ -157,9 +157,10 @@ figure, blockquote { margin: 0; }
 .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; }
 .brand__mark { width: 40px; height: 40px; flex: none; }
 .brand__name { font-family: var(--f-display); font-size: 1.45rem; line-height: 1; letter-spacing: -0.01em; }
-.brand__tag { display: block; font-family: var(--f-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-mute); margin-top: .35rem; }
+.brand__tag { display: block; font-family: var(--f-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-mute); margin-top: .35rem; white-space: nowrap; font-size: .7rem; }
 
-.nav { display: flex; align-items: center; gap: 2.2rem; }
+.nav { display: flex; align-items: center; gap: clamp(1.1rem, 1.8vw, 2rem); }
+.nav a { white-space: nowrap; }
 .nav a:not(.btn) {
   font-size: 0.92rem; text-decoration: none; position: relative; padding: .25rem 0;
 }
@@ -176,7 +177,7 @@ figure, blockquote { margin: 0; }
   font-family: var(--f-mono); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .nav-toggle { display: inline-flex; align-items: center; gap: .6rem; }
   .nav {
     position: fixed; inset: 76px 0 auto 0; flex-direction: column; align-items: flex-start; gap: 0;
@@ -670,3 +671,36 @@ a.drug:hover .drug__photo img { transform: scale(1.05); }
 .mt-0 { margin-top: 0; }
 .center-cta { margin-top: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Google review prompt (bottom-left) ---------- */
+
+.g-review {
+  position: fixed; left: 20px; bottom: 20px; z-index: 55;
+  display: flex; align-items: center;
+  background: #fff; color: #202124; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 38, 34, .22), 0 2px 6px rgba(15, 38, 34, .12);
+  opacity: 0; transform: translateY(16px); pointer-events: none;
+  transition: opacity .5s var(--ease), transform .5s var(--ease);
+}
+.g-review[hidden] { display: none; }
+.g-review.is-in { opacity: 1; transform: none; pointer-events: auto; }
+.g-review__link { display: flex; align-items: center; gap: .85rem; padding: .85rem 1.1rem .85rem 1rem; text-decoration: none; color: inherit; border-radius: 16px; }
+.g-review__link:hover .g-review__cta { text-decoration: underline; }
+.g-review__logo { width: 34px; height: 34px; flex: none; }
+.g-review__text { display: flex; flex-direction: column; gap: .2rem; line-height: 1.2; }
+.g-review__stars { display: flex; gap: 2px; }
+.g-review__stars svg { width: 18px; height: 18px; fill: #f4b400; }
+.g-review__cta { font-size: .92rem; font-weight: 600; color: #3c4043; }
+.g-review__close {
+  position: absolute; top: -9px; right: -9px; width: 24px; height: 24px; border-radius: 50%;
+  border: 0; background: var(--bottle); color: var(--chalk); font-size: 16px; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; padding: 0;
+}
+@media (max-width: 760px) {
+  .g-review { left: 12px; bottom: calc(66px + env(safe-area-inset-bottom)); }
+  .g-review__link { padding: .65rem .9rem .65rem .8rem; gap: .65rem; }
+  .g-review__logo { width: 28px; height: 28px; }
+  .g-review__stars svg { width: 15px; height: 15px; }
+  .g-review__cta { font-size: .82rem; }
+}
+@media (prefers-reduced-motion: reduce) { .g-review { transition: none; } }
