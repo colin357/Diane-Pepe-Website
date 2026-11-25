@@ -7,7 +7,7 @@ No build step. Plain HTML, CSS and a small JS file, deployed on Vercel.
 ## Deploy on Vercel
 
 1. Import this repo in Vercel → Framework preset: **Other** → no build command, output directory `.` (root).
-2. Add the custom domain. `vercel.json` turns on clean URLs (`/about`, `/loan-programs`, `/faq`) and sets cache and security headers. CSS and JS are always revalidated; images are cached for a year, so give a changed image a new filename.
+2. Add the custom domain. `vercel.json` turns on clean URLs (`/about`, `/loan-programs`, `/faq`, `/equity-optimizer`) and sets cache and security headers. CSS and JS are always revalidated; images are cached for a year, so give a changed image a new filename.
 
 ## Pages
 
@@ -17,6 +17,7 @@ No build step. Plain HTML, CSS and a small JS file, deployed on Vercel.
 | `/about` | `about.html` |
 | `/loan-programs` | `loan-programs.html` |
 | `/faq` | `faq.html` |
+| `/equity-optimizer` | `equity-optimizer.html` (uses `assets/css/heo.css` and `assets/js/heo-calc.js` for the calculator) |
 | 404 | `404.html` |
 
 ## AEO / answer-engine setup
@@ -37,5 +38,5 @@ No build step. Plain HTML, CSS and a small JS file, deployed on Vercel.
 
 ## Editing
 
-Header, footer and contact sections are repeated in each HTML file. If you change one, change it in all five files.
+Header, footer and contact sections are repeated in each HTML file. If you change one, change it in all six files.
 Photos in `assets/img/` come from Unsplash (free to use under the Unsplash License). The headshot comes from the client portal.
