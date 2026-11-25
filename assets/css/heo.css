@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Home Equity Optimizer page: sweep example + savings calculator
+   Loaded only on /equity-optimizer. Builds on site.css tokens.
+   ========================================================================== */
+
+:root {
+  --heo-trad: #b8822c;  /* traditional series: brass (validated vs --paper) */
+  --heo-opt: #14805a;   /* optimizer series: green (validated vs --paper) */
+}
+
+/* ---------- Nightly sweep example ---------- */
+.sweep { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 1rem; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); padding: 1.4rem 0; margin-bottom: 1.5rem; }
+.sweep .label { display: block; margin-bottom: .3rem; }
+.sweep strong { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.4rem, 2.4vw, 2rem); color: var(--ink); line-height: 1.1; }
+.sweep__op { font-family: var(--f-display); font-size: 1.8rem; color: var(--brass); }
+.sweep__out strong { color: var(--heo-opt); }
+@media (max-width: 640px) {
+  .sweep { grid-template-columns: 1fr; gap: .4rem; }
+  .sweep__op { line-height: 1; }
+}
+
+/* ---------- Calculator layout ---------- */
+.calc { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+@media (max-width: 960px) { .calc { grid-template-columns: 1fr; } }
+
+.calc__inputs { background: var(--paper); padding: clamp(1.25rem, 3vw, 2rem); border-top: 3px solid var(--bottle); }
+.calc__inputs fieldset { border: 0; margin: 0 0 1.75rem; padding: 0; min-width: 0; }
+.calc__inputs legend { padding: 0; margin-bottom: 1rem; }
+.cfield { margin-bottom: 1rem; }
+.cfield label { display: block; font-size: .95rem; font-weight: 500; margin-bottom: .4rem; color: var(--ink); }
+.cinput { display: flex; align-items: center; border: 1px solid var(--rule); background: #fff; transition: border-color .25s; }
+.cinput:focus-within { border-color: var(--bottle-3); box-shadow: 0 0 0 2px rgba(168,131,74,.35); }
+.cinput span { padding: 0 .8rem; color: var(--ink-mute); font-weight: 500; }
+.cinput input { flex: 1; min-width: 0; border: 0; background: transparent; padding: .75rem .8rem; font: inherit; font-size: 1.05rem; color: var(--ink); -moz-appearance: textfield; }
+.cinput span + input { padding-left: 0; }
+.cinput input:focus { outline: none; }
+.cfield select { width: 100%; border: 1px solid var(--rule); background: #fff; padding: .75rem .8rem; font: inherit; font-size: 1rem; color: var(--ink); border-radius: 0; }
+.cfield select:focus { outline: none; border-color: var(--bottle-3); box-shadow: 0 0 0 2px rgba(168,131,74,.35); }
+.calc__hint { font-size: .88rem; color: var(--ink-mute); margin: 0; }
+
+/* ---------- Results ---------- */
+.calc__hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--chalk); }
+.stat { background: var(--bottle); color: var(--chalk); padding: clamp(1.25rem, 3vw, 2rem); }
+.stat .label { color: var(--brass-lt); display: block; margin-bottom: .6rem; }
+.stat strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1; letter-spacing: -0.01em; }
+.stat__sub { display: block; margin-top: .6rem; font-size: .92rem; color: rgba(236,238,231,.75); }
+@media (max-width: 520px) { .calc__hero { grid-template-columns: 1fr; } }
+
+.compare { margin: 1.5rem 0 0; border-top: 1px solid var(--ink); }
+.compare > div { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.compare dt { margin: 0; }
+.compare dd { margin: 0; font-family: var(--f-display); font-size: 1.2rem; color: var(--ink); }
+.compare__head dd { font-family: var(--f-mono); font-size: .8rem; color: var(--ink); }
+@media (max-width: 520px) { .compare > div { grid-template-columns: 1fr 1fr; } .compare dt { grid-column: 1 / -1; } .compare__head dt { display: none; } }
+
+.key { display: inline-block; width: 18px; height: 0; border-top: 3px solid var(--heo-opt); vertical-align: middle; margin-right: .5rem; border-radius: 2px; }
+.key--trad { border-top: 3px dashed var(--heo-trad); }
+
+.calc__note { margin: 1.25rem 0 0; padding: 1rem 1.25rem; border-left: 3px solid var(--aubergine); background: var(--paper); font-size: .98rem; color: var(--ink-soft); }
+
+/* ---------- Chart ---------- */
+.chart { margin-top: 2rem; background: var(--paper); padding: clamp(1rem, 2.5vw, 1.5rem); }
+.chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; margin-bottom: 1rem; }
+.chart__legend { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; font-size: .9rem; color: var(--ink-soft); }
+.chart__plot { position: relative; }
+.chart__plot svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart__plot .grid line { stroke: var(--rule); stroke-width: 1; }
+.chart__plot .axis text { fill: var(--ink-mute); font-family: var(--f-body); font-size: 12px; }
+.chart__plot .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart__plot .line--trad { stroke: var(--heo-trad); stroke-dasharray: 6 4; }
+.chart__plot .line--opt { stroke: var(--heo-opt); }
+.chart__plot .end-label { font-family: var(--f-body); font-size: 12px; font-weight: 600; fill: var(--ink); }
+.chart__plot .dot { stroke: var(--paper); stroke-width: 2; }
+.chart__plot .dot--trad { fill: var(--heo-trad); }
+.chart__plot .dot--opt { fill: var(--heo-opt); }
+.chart__plot .cross { stroke: var(--ink-mute); stroke-width: 1; }
+.chart__tip { position: absolute; top: 0; pointer-events: none; background: var(--ink); color: var(--paper); padding: .55rem .75rem; font-size: .85rem; line-height: 1.45; white-space: nowrap; border-radius: 4px; box-shadow: 0 8px 20px -10px rgba(0,0,0,.5); }
+.chart__tip b { display: block; font-weight: 600; margin-bottom: .15rem; }
+.chart__tip i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: .4rem; vertical-align: -1px; }
+
+.chart__table { margin-top: 1rem; font-size: .92rem; }
+.chart__table summary { cursor: pointer; font-weight: 600; color: var(--ink-soft); }
+.chart__scroll { max-height: 320px; overflow: auto; margin-top: .75rem; }
+.chart__table table { width: 100%; border-collapse: collapse; }
+.chart__table th, .chart__table td { text-align: right; padding: .4rem .6rem; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+.chart__table th:first-child, .chart__table td:first-child { text-align: left; }
+.chart__table thead th { position: sticky; top: 0; background: var(--paper); font-weight: 600; }
+
+.calc__disclaimer { margin: 2rem 0 0; font-size: .82rem; line-height: 1.6; color: var(--ink-mute); max-width: 70em; }
